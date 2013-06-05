@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9En-JX-Fy2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2Tz-78-B6g">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="9En-JX-Fy2" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q1Y-yS-tgJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iPh-AV-LEd" kind="relationship" relationship="rootViewController" id="FuF-Bb-Edm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6s4-yb-c9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="737" y="83"/>
+        </scene>
+        <!--Choose View Controller - What Do You Want To Do?-->
+        <scene sceneID="a86-36-QNe">
+            <objects>
+                <viewController id="iPh-AV-LEd" customClass="ChooseViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PWx-da-eKs">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mWD-bY-k7N">
+                                <rect key="frame" x="96" y="91" width="128" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Encrypt Image">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="encryptionSelected:" destination="iPh-AV-LEd" eventType="touchUpInside" id="oFo-6T-Ywa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jXr-Wt-g64">
+                                <rect key="frame" x="96" y="269" width="128" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Decrypt Image">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decryptionSelected:" destination="iPh-AV-LEd" eventType="touchUpInside" id="D0d-2Y-nML"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hide an image within another image:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AA1-4m-ica">
+                                <rect key="frame" x="22" y="55" width="276" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Extract a hidden image from an image:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RYi-ix-qzj">
+                                <rect key="frame" x="14" y="231" width="292" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Image Saved!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aD6-Q4-GEO">
+                                <rect key="frame" x="108" y="20" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="What Do You Want To Do?" id="9t5-H8-Ioi"/>
+                    <connections>
+                        <outlet property="decryptButton" destination="jXr-Wt-g64" id="aQQ-Z4-v0z"/>
+                        <outlet property="encryptButton" destination="mWD-bY-k7N" id="rOH-iH-YeH"/>
+                        <outlet property="saved" destination="aD6-Q4-GEO" id="HtH-rg-mBN"/>
+                        <segue destination="jpL-pn-GnE" kind="push" identifier="toEncrypt" id="E8y-4Q-kXX"/>
+                        <segue destination="XDY-vZ-kFc" kind="push" identifier="toDecrypt" id="TU1-eo-DOt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lmd-Vj-CwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="83"/>
+        </scene>
+        <!--Image Picker App View Controller - Select Image To Extract Secret-->
+        <scene sceneID="ORa-qx-ojI">
+            <objects>
+                <viewController id="XDY-vZ-kFc" customClass="ImagePickerAppViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SnF-pU-0ab">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="nCO-Xs-bII">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G5l-C4-mFd">
+                                <rect key="frame" x="103" y="352" width="115" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Select Photo">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="jpL-pn-GnE" eventType="touchUpInside" id="Jrh-Oj-aH6"/>
+                                    <action selector="selectPhoto:" destination="XDY-vZ-kFc" eventType="touchUpInside" id="ueQ-os-UDv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Image To Extract Secret" id="dPF-yd-Mme"/>
+                    <connections>
+                        <outlet property="selectPhotoButton" destination="G5l-C4-mFd" id="aND-1z-pUY"/>
+                        <outlet property="selectedImageView" destination="nCO-Xs-bII" id="kgW-3Q-KbG"/>
+                        <segue destination="0y6-eF-GB7" kind="push" identifier="toDecryptionKeyEntry" id="YP4-L8-kf6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rjp-2n-CmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="369"/>
+        </scene>
+        <!--Decrypt Key View Controller - Enter Decryption Key-->
+        <scene sceneID="Tac-pm-H1c">
+            <objects>
+                <viewController id="0y6-eF-GB7" customClass="DecryptKeyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SJT-gR-3jP">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter Decryption Key:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nle-aj-RyA">
+                                <rect key="frame" x="77" y="29" width="166" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Secret Key Here!" minimumFontSize="17" id="QkV-Q4-KvP">
+                                <rect key="frame" x="77" y="58" width="166" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0y6-eF-GB7" id="8SJ-GT-kdj"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Selected Image:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7g3-52-wSl">
+                                <rect key="frame" x="99" y="126" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Qeh-Rn-evT">
+                                <rect key="frame" x="40" y="157" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Looks Inconspicuous does it not?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kdD-od-Kdl">
+                                <rect key="frame" x="34" y="293" width="252" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qQn-a5-WUy">
+                                <rect key="frame" x="122" y="339" width="78" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Reveal!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decrypt:" destination="0y6-eF-GB7" eventType="touchUpInside" id="EBD-T3-3Wu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Enter Decryption Key" id="F6R-bp-FXF"/>
+                    <connections>
+                        <outlet property="decryptButton" destination="qQn-a5-WUy" id="elW-jg-Lfi"/>
+                        <outlet property="encryptedImageView" destination="Qeh-Rn-evT" id="MS9-ny-F5B"/>
+                        <outlet property="keyTextField" destination="QkV-Q4-KvP" id="egG-5K-ZYA"/>
+                        <segue destination="i9Q-UA-K2y" kind="push" identifier="toDecrypt" id="VRc-Hg-6Z7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5F-Hq-eL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2138" y="369"/>
+        </scene>
+        <!--Decrypt View Controller - Decrypted Result-->
+        <scene sceneID="04M-Et-UbN">
+            <objects>
+                <viewController id="i9Q-UA-K2y" customClass="DecryptViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fFZ-sN-thT">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Encrypted Image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DUS-4g-a2S">
+                                <rect key="frame" x="96" y="41" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="LL3-e6-wdS">
+                                <rect key="frame" x="40" y="61" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Decrypted Image:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b2O-7e-6Ky">
+                                <rect key="frame" x="93" y="232" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="97o-6A-C4W">
+                                <rect key="frame" x="40" y="261" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(Tap to view in full screen mode)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oP6-kx-CtI">
+                                <rect key="frame" x="34" y="449" width="246" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Decrypted Result" id="0cs-GQ-8VO"/>
+                    <connections>
+                        <outlet property="decryptedImageView" destination="97o-6A-C4W" id="OHx-0M-OmE"/>
+                        <outlet property="encryptedImageView" destination="LL3-e6-wdS" id="D3U-Xw-0RE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RjP-zu-SN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660" y="369"/>
+        </scene>
+        <!--Image Picker App View Controller - Select Image To Hide-->
+        <scene sceneID="lL4-CI-yXW">
+            <objects>
+                <viewController id="jpL-pn-GnE" customClass="ImagePickerAppViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MNx-3F-D5H">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="84x-nI-UOY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7gd-Ac-kRD">
+                                <rect key="frame" x="103" y="352" width="115" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Select Photo">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="jpL-pn-GnE" eventType="touchUpInside" id="SNy-Ba-I7E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Image To Hide" id="AJ7-pa-0vd"/>
+                    <connections>
+                        <outlet property="selectPhotoButton" destination="7gd-Ac-kRD" id="27O-KG-XjB"/>
+                        <outlet property="selectedImageView" destination="84x-nI-UOY" id="4St-NS-pZj"/>
+                        <segue destination="YcD-pu-8MV" kind="push" identifier="toSecondImageSelect" id="kSe-VF-7O3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYe-wa-A17" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="-382"/>
+        </scene>
+        <!--Image Picker App View Controller - Select 'Cover' Image-->
+        <scene sceneID="cXh-le-mgQ">
+            <objects>
+                <viewController id="YcD-pu-8MV" customClass="ImagePickerAppViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="biT-K4-R8n">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="qgI-VT-BhD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7OE-tI-cVW">
+                                <rect key="frame" x="103" y="352" width="115" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Select Photo">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="YcD-pu-8MV" eventType="touchUpInside" id="Onw-Mg-dZK"/>
+                                    <action selector="selectPhoto:" destination="jpL-pn-GnE" eventType="touchUpInside" id="SaR-qc-gDL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select 'Cover' Image" id="gUc-xj-cSn"/>
+                    <connections>
+                        <outlet property="selectPhotoButton" destination="7OE-tI-cVW" id="P4A-J3-Q47"/>
+                        <outlet property="selectedImageView" destination="qgI-VT-BhD" id="Tqc-mf-ngN"/>
+                        <segue destination="swx-0y-IOI" kind="push" identifier="toKeyEntry" id="Nnk-EB-4Rp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jO-Wd-rBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2152" y="-382"/>
+        </scene>
+        <!--Key Select View Controller - Enter a Key-->
+        <scene sceneID="fLs-UM-Hi0">
+            <objects>
+                <viewController id="swx-0y-IOI" customClass="KeySelectViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ehg-NV-Crg">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cover Image:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cvN-bq-vsI">
+                                <rect key="frame" x="109" y="218" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="M5F-T5-kQY">
+                                <rect key="frame" x="85" y="248" width="150" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="qyV-1c-hXA">
+                                <rect key="frame" x="85" y="111" width="150" height="100"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Image To Hide:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cHO-GS-7dD">
+                                <rect key="frame" x="102" y="81" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter Encryption Key" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tGY-jg-3TT">
+                                <rect key="frame" x="80" y="6" width="160" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yx9-vJ-kEY">
+                                <rect key="frame" x="129" y="355" width="62" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Hide!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="encrypt:" destination="swx-0y-IOI" eventType="touchUpInside" id="sSK-Kl-uyB"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Secret Message Here" minimumFontSize="17" id="XIb-4a-3vf">
+                                <rect key="frame" x="80" y="35" width="160" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="swx-0y-IOI" id="gu9-DJ-tST"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Enter a Key" id="KbE-di-kDg"/>
+                    <connections>
+                        <outlet property="coverImageView" destination="M5F-T5-kQY" id="PsG-Rt-CvF"/>
+                        <outlet property="encryptButton" destination="Yx9-vJ-kEY" id="Bev-JP-lQk"/>
+                        <outlet property="keyTextField" destination="XIb-4a-3vf" id="EP4-wZ-CG6"/>
+                        <outlet property="secretImageView" destination="qyV-1c-hXA" id="60I-e2-1Kf"/>
+                        <segue destination="Ah5-at-Tov" kind="push" identifier="toEncrypt" id="MW9-aY-6c5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWY-5P-YAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660" y="-382"/>
+        </scene>
+        <!--Encrypt View Controller - Encrypted Result-->
+        <scene sceneID="UrF-ej-8ve">
+            <objects>
+                <viewController id="Ah5-at-Tov" customClass="EncryptViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q0K-bH-hms">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cover Image:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qyf-eq-Y9F">
+                                <rect key="frame" x="109" y="16" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="mcU-P9-TU7">
+                                <rect key="frame" x="40" y="37" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Encrypted Image:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g3J-us-8cz">
+                                <rect key="frame" x="93" y="197" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="tk0-V5-cdL">
+                                <rect key="frame" x="40" y="217" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vZW-wD-Wq1">
+                                <rect key="frame" x="73" y="361" width="174" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save To Camera Roll">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveImage:" destination="Ah5-at-Tov" eventType="touchUpInside" id="FDL-G8-r7f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Encrypted Result" id="XJD-La-LWW"/>
+                    <connections>
+                        <outlet property="coverImageView" destination="mcU-P9-TU7" id="N4D-Hl-YkJ"/>
+                        <outlet property="encryptedImageView" destination="tk0-V5-cdL" id="Whx-63-9Ry"/>
+                        <outlet property="saveButton" destination="vZW-wD-Wq1" id="m86-19-Key"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EBf-IU-jT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3118" y="-382"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="j3H-6o-TkB">
+            <objects>
+                <viewController id="Ger-B0-gFd" customClass="WelcomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yTP-Uk-eWu">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Steganography App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="COx-QJ-ogb">
+                                <rect key="frame" x="11" y="20" width="299" height="44"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tap to Continue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zej-vR-ldy">
+                                <rect key="frame" x="45" y="398" width="231" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" image="backgroundImage.png" id="8kk-mQ-hzT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Inspector.png" id="cHN-bj-LOK">
+                                <rect key="frame" x="0.0" y="133" width="150" height="150"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="topsecret.png" id="U48-WJ-Vt1">
+                                <rect key="frame" x="150" y="240" width="150" height="156"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="inconspicous.jpeg" id="d71-dI-tb0">
+                                <rect key="frame" x="140" y="233" width="170" height="170"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="8kk-mQ-hzT" id="hWL-zk-eVo"/>
+                        <outlet property="continueMessage" destination="Zej-vR-ldy" id="KvT-NB-Zyc"/>
+                        <outlet property="inconspiciousImage" destination="d71-dI-tb0" id="J1e-cL-iaI"/>
+                        <outlet property="inspectorImage" destination="cHN-bj-LOK" id="WaO-Zv-Iyy"/>
+                        <outlet property="topSecretImage" destination="U48-WJ-Vt1" id="HqW-ut-TL2"/>
+                        <outlet property="welcomeMessage" destination="COx-QJ-ogb" id="ZoU-yR-Nnu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mH9-2E-7j4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="83"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Inspector.png" width="300" height="300"/>
+        <image name="backgroundImage.png" width="800" height="800"/>
+        <image name="inconspicous.jpeg" width="1024" height="640"/>
+        <image name="topsecret.png" width="389" height="308"/>
+    </resources>
+    <classes>
+        <class className="ChooseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChooseViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="decryptionSelected:"/>
+                <relationship kind="action" name="encryptionSelected:"/>
+                <relationship kind="outlet" name="decryptButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="encryptButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="saved" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DecryptKeyViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DecryptKeyViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="decrypt:"/>
+                <relationship kind="outlet" name="decryptButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="encryptedImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="keyTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="DecryptViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DecryptViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="decryptedImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="encryptedImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="EncryptViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EncryptViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveImage:"/>
+                <relationship kind="outlet" name="coverImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="encryptedImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="ImagePickerAppViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImagePickerAppViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="selectPhoto:"/>
+                <relationship kind="outlet" name="selectPhotoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="selectedImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="KeySelectViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeySelectViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="encrypt:"/>
+                <relationship kind="outlet" name="coverImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="encryptButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="keyTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="secretImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="WelcomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WelcomeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="backgroundImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="continueMessage" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="inconspiciousImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="inspectorImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="topSecretImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="welcomeMessage" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
